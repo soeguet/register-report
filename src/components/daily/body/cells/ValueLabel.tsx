@@ -11,14 +11,15 @@ type ValueLabelProps = {
 };
 
 function ValueLabel(props: ValueLabelProps) {
-    const dailyObject = useDailyStore((state) => state.dailyValues);
+    const dailyObject = useDailyStore(
+        (state) => state.dailyValues[props.nominal],
+    );
 
     const amount: number = useMemo(() => {
-        if (!dailyObject || !dailyObject[props.nominal]) {
+        if (!dailyObject) {
             return 0;
         }
-        const values = dailyObject[props.nominal] || [];
-        const sum = values.reduce(
+        const sum = dailyObject.reduce(
             (acc, value) => acc + parseFloat(value || "0"),
             0,
         );

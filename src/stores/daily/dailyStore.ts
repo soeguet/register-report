@@ -78,10 +78,13 @@ const useDailyStore: UseBoundStore<StoreApi<DailyStore>> = create<DailyStore>(
             value: string,
         ) =>
             set((state) => {
-                const newDailyValues: DailyObjectType = {
+                const newDailyValues = {
                     ...state.dailyValues,
                 };
+                // deep copy of the array
+                newDailyValues[nominal] = [...newDailyValues[nominal]];
                 newDailyValues[nominal][index] = value;
+
                 return { dailyValues: newDailyValues };
             }),
     }),

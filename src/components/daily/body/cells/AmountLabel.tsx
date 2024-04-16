@@ -1,6 +1,5 @@
 import {
     DailyObjectNominal,
-    DailyObjectType,
     useDailyStore,
 } from "../../../../stores/daily/dailyStore.ts";
 import { useMemo } from "react";
@@ -10,21 +9,20 @@ type AmountLabelProps = {
 };
 
 function AmountLabel(props: AmountLabelProps) {
-    const dailyObject: DailyObjectType = useDailyStore(
-        (state) => state.dailyValues,
+    const objectWithDailyValues = useDailyStore(
+        (state) => state.dailyValues[props.nominal],
     );
 
     const amount = useMemo(() => {
-        if (!dailyObject || !dailyObject[props.nominal]) {
+        if (!objectWithDailyValues) {
             return 0;
         }
-        const values = dailyObject[props.nominal] || [];
-        const sum = values.reduce(
+        const sum = objectWithDailyValues.reduce(
             (acc, value) => acc + parseFloat(value || "0"),
             0,
         );
         return sum;
-    }, [dailyObject, props.nominal]);
+    }, [objectWithDailyValues]);
 
     return (
         <>

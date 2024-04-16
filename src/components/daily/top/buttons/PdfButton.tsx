@@ -1,3 +1,4 @@
+import { getCurrentDateTime } from "../../../../utils/time";
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 
@@ -11,9 +12,15 @@ function PdfButton(props: PdfButtonProps) {
             const imgData = canvas.toDataURL("image/jpeg");
             const pdf = new jsPDF({
                 orientation: "landscape",
+                unit: "mm",
+                format: "a4",
+                putOnlyUsedFonts: true,
+                floatPrecision: 16,
             });
-            pdf.addImage(imgData, "PNG", 10, 10, 250, 200);
-            pdf.save("webpage_snapshot.pdf");
+
+            pdf.addImage(imgData, "JPEG", 0, 0, 250, 250);
+            const pdfName = getCurrentDateTime();
+            pdf.save(pdfName + ".pdf");
         }
     };
     return (
