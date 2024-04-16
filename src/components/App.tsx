@@ -1,11 +1,11 @@
-import Canvas from "./Canvas.tsx";
+import { MainFrame } from "./daily/MainFrame.tsx";
 
 function App() {
     return (
         <>
-            <Canvas />
+            <MainFrame />
         </>
     );
 }
 
-export default App;
+export { App };
