@@ -1,10 +1,13 @@
-import { useDailyStore } from "../../../../stores/daily/dailyStore.ts";
+import {
+    DailyObjectNominal,
+    useDailyStore,
+} from "../../../../stores/daily/dailyStore.ts";
 import { formatNumber } from "../../../../utils/converter.ts";
 import { coinValues } from "../../../../utils/customTypes.ts";
 import { useMemo } from "react";
 
 type ValueLabelProps = {
-    nominal: string;
+    nominal: DailyObjectNominal;
 };
 
 function ValueLabel(props: ValueLabelProps) {
@@ -16,7 +19,7 @@ function ValueLabel(props: ValueLabelProps) {
         }
         const values = dailyObject[props.nominal] || [];
         const sum = values.reduce(
-            (acc, value) => acc + parseFloat(value || 0),
+            (acc, value) => acc + parseFloat(value || "0"),
             0,
         );
         const value = coinValues[props.nominal];
@@ -38,4 +41,3 @@ function ValueLabel(props: ValueLabelProps) {
 }
 
 export { ValueLabel };
-

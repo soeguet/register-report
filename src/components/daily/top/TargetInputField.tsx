@@ -4,7 +4,7 @@ function TargetInputField() {
     const targetValue = useDailyStore((state) => state.targetValue);
     const setTargetValue = useDailyStore((state) => state.setTargetValue);
 
-    function onChangeHandler(event) {
+    function onChangeHandler(event: React.ChangeEvent<HTMLInputElement>) {
         if (event.target.value === "") {
             setTargetValue(0);
             return;
@@ -17,7 +17,7 @@ function TargetInputField() {
         }
     }
 
-    function inputFieldValidation(event) {
+    function inputFieldValidation(event: React.ChangeEvent<HTMLInputElement>) {
         const regex = /^\d+(\.\d{0,2})?$/;
         return regex.test(event.target.value);
     }

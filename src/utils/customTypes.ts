@@ -15,7 +15,7 @@ export const coinValues = {
     "1_cent": 0.01,
 };
 
-export const cointLabels = {
+export const coinLabels = {
     "200_euro": "200 €",
     "100_euro": "100 €",
     "50_euro": "50 €",
@@ -31,3 +31,4 @@ export const cointLabels = {
     "2_cent": "0,02 €",
     "1_cent": "0,01 €",
 };
+

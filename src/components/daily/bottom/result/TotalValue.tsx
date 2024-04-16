@@ -9,7 +9,7 @@ function TotalValue() {
     return (
         <>
             <div className="flex justify-between mb-2">
-                <div className="mr-5">total </div>
+                <div className="mr-5">total</div>
                 <div className="text-right">{formattedTotal} €</div>
             </div>
         </>

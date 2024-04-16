@@ -1,11 +1,12 @@
-import { cointLabels } from "../../../../utils/customTypes.ts";
+import { DailyObjectNominal } from "../../../../stores/daily/dailyStore.ts";
+import { coinLabels } from "../../../../utils/customTypes.ts";
 
 type CustomLabelProps = {
-    labelTitle: string;
+    labelTitle: DailyObjectNominal;
 };
 
 function CustomLabel(props: CustomLabelProps) {
-    const label = cointLabels[props.labelTitle];
+    const label = coinLabels[props.labelTitle];
     return (
         <>
             <div className="text-right m-2  border border-transparent text-nowrap">
@@ -21,4 +22,3 @@ function CustomLabel(props: CustomLabelProps) {
 }
 
 export { CustomLabel };
-

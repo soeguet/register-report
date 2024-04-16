@@ -17,6 +17,7 @@ function DiffValue() {
             return "bg-blue-200";
         }
     };
+
     return (
         <>
             <div className="flex justify-between">

@@ -1,7 +1,10 @@
-import { useDailyStore } from "../../../../stores/daily/dailyStore.ts";
+import {
+    DailyObjectNominal,
+    useDailyStore,
+} from "../../../../stores/daily/dailyStore.ts";
 
 type CustomInputFieldProps = {
-    nominal: string;
+    nominal: DailyObjectNominal;
     index: number;
 };
 
@@ -40,4 +43,3 @@ function CustomInputField(props: CustomInputFieldProps) {
 }
 
 export { CustomInputField };
-
