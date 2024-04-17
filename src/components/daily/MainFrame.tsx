@@ -11,7 +11,11 @@ function MainFrame() {
     const mainBodyRef = React.useRef(null);
     return (
         <>
-            <main className="m-auto w-5/6 h-screen mb-1" ref={mainBodyRef}>
+            <main
+                data-testid="daily-main-body"
+                className="m-auto w-5/6 h-screen mb-1"
+                ref={mainBodyRef}
+            >
                 <TopArea bodyRef={mainBodyRef} />
                 <div className="grid grid-cols-8 m-2 ">
                     <LabelColumn />
@@ -33,3 +37,4 @@ function MainFrame() {
 }
 
 export { MainFrame };
+

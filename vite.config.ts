@@ -9,10 +9,12 @@ export default defineConfig({
     },
     plugins: [react()],
     test: {
+        root: "./src",
         globals: true,
         environment: "jsdom",
         setupFiles: "./src/test/setup.ts",
         // include: ["src/**/*.{js,ts}"],
         includeSource: ["src/**/*.{js,ts}"],
+        // css: true,
     },
 });
