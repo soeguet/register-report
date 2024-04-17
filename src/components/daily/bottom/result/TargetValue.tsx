@@ -7,7 +7,9 @@ function TargetValue() {
         <>
             <div className="flex justify-between mb-2">
                 <div className="mr-5">target</div>
-                <div className="text-right">{formatNumber(targetValue)} €</div>
+                <div data-testid="targetDisplayDiv" className="text-right">
+                    {formatNumber(targetValue)} €
+                </div>
             </div>
         </>
     );

@@ -29,6 +29,7 @@ function TargetInputField() {
                     target value:
                 </label>
                 <input
+                    data-testid="targetValueInput"
                     name="targetValueInput"
                     id="targetValueInput"
                     type="number"
