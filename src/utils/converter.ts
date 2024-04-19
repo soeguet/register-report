@@ -14,11 +14,8 @@ export function formatNumber(value: number): string {
 export function calcTotalSum(dailyObject: DailyObjectType) {
     let total = 0;
     Object.entries(dailyObject).forEach(
-        ([nominal, values]: [string, string[]]) => {
-            const sum = values.reduce(
-                (acc, value) => acc + parseFloat(value || "0"),
-                0,
-            );
+        ([nominal, values]: [string, number[]]) => {
+            const sum = values.reduce((acc, value) => acc + value, 0);
             const nominalKey = nominal as DailyObjectNominal;
             const totalValue = sum * coinValues[nominalKey];
             total += totalValue;

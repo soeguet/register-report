@@ -44,20 +44,20 @@ describe("converter utility methods", () => {
 
     test("check if custom sum function works properly - 6 each", () => {
         const fakeObject = {
-            "200_euro": ["1", "2", "3"],
-            "100_euro": ["1", "2", "3"],
-            "50_euro": ["1", "2", "3"],
-            "20_euro": ["1", "2", "3"],
-            "10_euro": ["1", "2", "3"],
-            "5_euro": ["1", "2", "3"],
-            "2_euro": ["1", "2", "3"],
-            "1_euro": ["1", "2", "3"],
-            "50_cent": ["1", "2", "3"],
-            "20_cent": ["1", "2", "3"],
-            "10_cent": ["1", "2", "3"],
-            "5_cent": ["1", "2", "3"],
-            "2_cent": ["1", "2", "3"],
-            "1_cent": ["1", "2", "3"],
+            "200_euro": [1, 2, 3],
+            "100_euro": [1, 2, 3],
+            "50_euro": [1, 2, 3],
+            "20_euro": [1, 2, 3],
+            "10_euro": [1, 2, 3],
+            "5_euro": [1, 2, 3],
+            "2_euro": [1, 2, 3],
+            "1_euro": [1, 2, 3],
+            "50_cent": [1, 2, 3],
+            "20_cent": [1, 2, 3],
+            "10_cent": [1, 2, 3],
+            "5_cent": [1, 2, 3],
+            "2_cent": [1, 2, 3],
+            "1_cent": [1, 2, 3],
         };
 
         const totalSum = calcTotalSum(fakeObject);
@@ -69,20 +69,20 @@ describe("converter utility methods", () => {
 
     test("check if custom sum function works properly - 4 each", () => {
         const fakeObject = {
-            "200_euro": ["1", "3"],
-            "100_euro": ["1", "3"],
-            "50_euro": ["1", "3"],
-            "20_euro": ["1", "3"],
-            "10_euro": ["1", "3"],
-            "5_euro": ["1", "3"],
-            "2_euro": ["1", "3"],
-            "1_euro": ["1", "3"],
-            "50_cent": ["1", "3"],
-            "20_cent": ["1", "3"],
-            "10_cent": ["1", "3"],
-            "5_cent": ["1", "3"],
-            "2_cent": ["1", "3"],
-            "1_cent": ["1", "3"],
+            "200_euro": [1, 3],
+            "100_euro": [1, 3],
+            "50_euro": [1, 3],
+            "20_euro": [1, 3],
+            "10_euro": [1, 3],
+            "5_euro": [1, 3],
+            "2_euro": [1, 3],
+            "1_euro": [1, 3],
+            "50_cent": [1, 3],
+            "20_cent": [1, 3],
+            "10_cent": [1, 3],
+            "5_cent": [1, 3],
+            "2_cent": [1, 3],
+            "1_cent": [1, 3],
         };
 
         const totalSum = calcTotalSum(fakeObject);
@@ -94,20 +94,20 @@ describe("converter utility methods", () => {
 
     test("check if custom sum function works properly - random for each", () => {
         const fakeObject = {
-            "200_euro": ["1", "3", "28"],
-            "100_euro": ["1", "3", " 105"],
-            "50_euro": ["1", "3", "17"],
-            "20_euro": ["1", "3", "87"],
-            "10_euro": ["1", "3", "99"],
-            "5_euro": ["1", "3", "12"],
-            "2_euro": ["1", "3", "11", "12"],
-            "1_euro": ["1", "3", "1", "4", "12", "22"],
-            "50_cent": ["1", "3", "5"],
-            "20_cent": ["1", "3", "1", "2"],
-            "10_cent": ["1", "3", "98"],
-            "5_cent": ["1", "3", "158"],
-            "2_cent": ["1", "3", "1", "2"],
-            "1_cent": ["1", "3"],
+            "200_euro": [1, 3, 28],
+            "100_euro": [1, 3,  105],
+            "50_euro": [1, 3, 17],
+            "20_euro": [1, 3, 87],
+            "10_euro": [1, 3, 99],
+            "5_euro": [1, 3, 12],
+            "2_euro": [1, 3, 11, 12],
+            "1_euro": [1, 3, 1, 4, 12, 22],
+            "50_cent": [1, 3, 5],
+            "20_cent": [1, 3, 1, 2],
+            "10_cent": [1, 3, 98],
+            "5_cent": [1, 3, 158],
+            "2_cent": [1, 3, 1, 2],
+            "1_cent": [1, 3],
         };
 
         const totalSum = calcTotalSum(fakeObject);

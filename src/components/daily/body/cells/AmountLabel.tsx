@@ -18,7 +18,7 @@ function AmountLabel(props: AmountLabelProps) {
             return 0;
         }
         const sum = objectWithDailyValues.reduce(
-            (acc, value) => acc + parseFloat(value || "0"),
+            (acc, value) => acc + value,
             0,
         );
         return sum;

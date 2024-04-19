@@ -20,7 +20,7 @@ function ValueLabel(props: ValueLabelProps) {
             return 0;
         }
         const sum = dailyObject.reduce(
-            (acc, value) => acc + parseFloat(value || "0"),
+            (acc, value) => acc + value,
             0,
         );
         const value = coinValues[props.nominal];
