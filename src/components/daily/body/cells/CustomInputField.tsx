@@ -19,6 +19,7 @@ function CustomInputField(props: CustomInputFieldProps) {
             <div className="m-2">
                 <input
                     id={`${props.nominal}-${props.index}`}
+                    data-testid={`${props.nominal}-${props.index}`}
                     className="text-right w-full box-border border border-black "
                     key={`${props.nominal}-${props.index}`}
                     type={"number"}

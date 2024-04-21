@@ -26,7 +26,10 @@ function AmountLabel(props: AmountLabelProps) {
 
     return (
         <>
-            <div className="text-right m-2 border border-transparent text-nowrap">
+            <div
+                data-testid={`amount-label-${props.nominal}`}
+                className="text-right m-2 border border-transparent text-nowrap"
+            >
                 {amount} x
             </div>
             {props.nominal === "5_euro" && (

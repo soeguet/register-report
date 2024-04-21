@@ -20,16 +20,32 @@ function ResultRow() {
     async function validationRequest() {
         const applicationState = useDailyStore.getState()
             .dailyValues as DailyObjectType;
+        const targetValue = useDailyStore.getState().targetValue;
 
         const requestPayload = {
             payloadType: 1,
             requestValidation: {
-                targetValue: "100",
+                targetValue: targetValue,
             },
             requestValues: {
-                euro200: applicationState["200_euro"][0],
+                euro200: applicationState["200_euro"],
+                // euro100: applicationState["100_euro"],
+                // euro50: applicationState["50_euro"],
+                // euro20: applicationState["20_euro"],
+                // euro10: applicationState["10_euro"],
+                // euro5: applicationState["5_euro"],
+                // euro2: applicationState["2_euro"],
+                // euro1: applicationState["1_euro"],
+                // cent50: applicationState["50_cent"],
+                // cent20: applicationState["20_cent"],
+                // cent10: applicationState["10_cent"],
+                // cent5: applicationState["5_cent"],
+                // cent2: applicationState["2_cent"],
+                // cent1: applicationState["1_cent"],
             },
         };
+
+        console.log(JSON.stringify(requestPayload));
 
         const requestOptions = {
             method: "POST",
