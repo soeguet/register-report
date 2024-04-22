@@ -22,7 +22,9 @@ function DiffValue() {
         <>
             <div className="flex justify-between">
                 <div className="mr-5">diff</div>
-                <div className={`${diffBgColor()} text-right`}>
+                <div
+					data-testid="diffDisplayDiv"
+					className={`${diffBgColor()} text-right`}>
                     {formattedDiff} €
                 </div>
             </div>

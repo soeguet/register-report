@@ -19,17 +19,17 @@ function ValueLabel(props: ValueLabelProps) {
         if (!dailyObject) {
             return 0;
         }
-        const sum = dailyObject.reduce(
-            (acc, value) => acc + value,
-            0,
-        );
+        const sum = dailyObject.reduce((acc, value) => acc + value, 0);
         const value = coinValues[props.nominal];
         return sum * value;
     }, [dailyObject, props.nominal]);
 
     return (
         <>
-            <div className="text-right m-2 border border-transparent text-nowrap">
+            <div
+                data-testid={`value-label-${props.nominal}`}
+                className="text-right m-2 border border-transparent text-nowrap"
+            >
                 {formatNumber(amount)} €
             </div>
             {props.nominal === "5_euro" && (
