@@ -25,7 +25,7 @@ function ResultRow() {
         const requestPayload = {
             payloadType: 1,
             requestValidation: {
-                targetValue: targetValue,
+                targetValue: targetValue.toFixed(2),
             },
             requestValues: {
                 euro200: applicationState["200_euro"],
@@ -65,7 +65,7 @@ function ResultRow() {
                 <TotalValue />
                 <DiffValue />
             </div>
-            <button onClick={validationRequest}>Validate</button>
+            <button className="bg-red-300 rounded-xl" onClick={validationRequest}>Validate</button>
         </>
     );
 }

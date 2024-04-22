@@ -8,12 +8,15 @@ function TotalValue() {
 
     return (
         <>
-            <div className="flex justify-between mb-2">
-                <div className="mr-5">total</div>
-                <div data-testid="totalDisplayDiv" className="text-right">
-                    {formattedTotal} €
-                </div>
-            </div>
+			<div className="flex justify-between mb-2">
+				<div className="mr-5">total</div>
+				<div className="flex">
+					<div data-testid="totalDisplayDiv" className="text-right">
+						{formattedTotal} €
+					</div>
+					<div className="ml-3">✔️</div>
+				</div>
+			</div>
         </>
     );
 }

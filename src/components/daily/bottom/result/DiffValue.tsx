@@ -20,14 +20,18 @@ function DiffValue() {
 
     return (
         <>
-            <div className="flex justify-between">
-                <div className="mr-5">diff</div>
-                <div
-					data-testid="diffDisplayDiv"
-					className={`${diffBgColor()} text-right`}>
-                    {formattedDiff} €
-                </div>
-            </div>
+			<div className="flex justify-between">
+				<div className="mr-5">diff</div>
+				<div className="flex">
+					<div
+						data-testid="diffDisplayDiv"
+						className={`${diffBgColor()} text-right`}
+					>
+						{formattedDiff} €
+					</div>
+					<div className="ml-3">✔️</div>
+				</div>
+			</div>
         </>
     );
 }
