@@ -1,13 +1,11 @@
 import { useDailyStore } from "../../../../stores/daily/dailyStore";
 import { calcTotalSum, formatNumber } from "../../../../utils/converter";
-import { Checkmark } from "../../../../utils/svg/Checkmark";
-import { LoadingSvg } from "../../../../utils/svg/LoadingSvg";
+import { ValidationIndicator } from "./ValidationIndicator";
 
 function TotalValue() {
     const dailyObject = useDailyStore((state) => state.dailyValues);
     const total = calcTotalSum(dailyObject);
     const formattedTotal = formatNumber(total);
-    const isFetchingData = useDailyStore((state) => state.isFetchingData);
 
     return (
         <>
@@ -17,9 +15,7 @@ function TotalValue() {
                     <div data-testid="totalDisplayDiv" className="text-right">
                         {formattedTotal} €
                     </div>
-                    <div className="ml-3">
-                        {isFetchingData ? <LoadingSvg /> : <Checkmark />}
-                    </div>
+                    <ValidationIndicator />
                 </div>
             </div>
         </>

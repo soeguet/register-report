@@ -1,15 +1,13 @@
 import { fetchWithDebounce } from "../../../../hooks/validationHook";
 import { useDailyStore } from "../../../../stores/daily/dailyStore";
 import { calcTotalSum, formatNumber } from "../../../../utils/converter";
-import { Checkmark } from "../../../../utils/svg/Checkmark";
-import { LoadingSvg } from "../../../../utils/svg/LoadingSvg";
+import { ValidationIndicator } from "./ValidationIndicator";
 import { useEffect } from "react";
 
 function DiffValue() {
     const target = useDailyStore((state) => state.targetValue);
     const dailyValues = useDailyStore((state) => state.dailyValues);
     const totalValue = calcTotalSum(dailyValues);
-    const isFetchingData = useDailyStore((state) => state.isFetchingData);
     const diff = totalValue - target;
     const formattedDiff = formatNumber(diff) || "0";
 
@@ -38,9 +36,7 @@ function DiffValue() {
                     >
                         {formattedDiff} €
                     </div>
-                    <div className="ml-3">
-                        {isFetchingData ? <LoadingSvg /> : <Checkmark />}
-                    </div>
+                    <ValidationIndicator />
                 </div>
             </div>
         </>

@@ -1,11 +1,9 @@
 import { useDailyStore } from "../../../../stores/daily/dailyStore";
 import { formatNumber } from "../../../../utils/converter";
-import { Checkmark } from "../../../../utils/svg/Checkmark";
-import { LoadingSvg } from "../../../../utils/svg/LoadingSvg";
+import { ValidationIndicator } from "./ValidationIndicator";
 
 function TargetValue() {
     const targetValue = useDailyStore((state) => state.targetValue);
-    const isFetchingData = useDailyStore((state) => state.isFetchingData);
     return (
         <>
             <div className="flex justify-between mb-2">
@@ -15,9 +13,7 @@ function TargetValue() {
                         {formatNumber(targetValue)} €
                     </div>
 
-                    <div className="ml-3">
-                        {isFetchingData ? <LoadingSvg /> : <Checkmark />}
-                    </div>
+                    <ValidationIndicator />
                 </div>
             </div>
         </>
