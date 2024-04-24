@@ -20,6 +20,11 @@ export type DailyObjectType = {
     [key in DailyObjectNominal]: number[];
 };
 
+export type FetchedData = {
+    apiTotalValue: string;
+    apiDiffValue: string;
+};
+
 type DailyStore = {
     targetValue: number;
     setTargetValue: (value: number) => void;
@@ -30,6 +35,9 @@ type DailyStore = {
         index: number,
         value: string,
     ) => void;
+    isFetchingData: boolean;
+    setIsFetchingData: (value: boolean) => void;
+    fetchedData: FetchedData;
 };
 
 const useDailyStore: UseBoundStore<StoreApi<DailyStore>> = create<DailyStore>(
@@ -89,6 +97,9 @@ const useDailyStore: UseBoundStore<StoreApi<DailyStore>> = create<DailyStore>(
 
                 return { dailyValues: newDailyValues };
             }),
+        isFetchingData: false,
+        setIsFetchingData: (value: boolean) => set({ isFetchingData: value }),
+        fetchedData: {},
     }),
 );
 
