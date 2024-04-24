@@ -58,6 +58,7 @@ function ResultRow() {
             .then((data) => console.log(data))
             .catch((error) => console.log("error", error));
     }
+
     return (
         <>
             <div className="flex flex-col p-5 text-nowrap">
@@ -65,7 +66,15 @@ function ResultRow() {
                 <TotalValue />
                 <DiffValue />
             </div>
-            <button className="bg-red-300 rounded-xl" onClick={validationRequest}>Validate</button>
+
+            <div className="flex">
+                <button
+                    className="bg-red-300 m-auto p-3 rounded-lg "
+                    onClick={validationRequest}
+                >
+                    Validate
+                </button>
+            </div>
         </>
     );
 }

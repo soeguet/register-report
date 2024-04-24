@@ -8,7 +8,7 @@
         "test": "vitest",
         "coverage": "vitest run --coverage",
         "test:ui": "vitest --ui",
-        "build": "tsc && vite build",
+        "build": "tsc && vite build && cd dist && sudo cp -r . /var/www/html/register-report",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "preview": "vite preview"
     },
