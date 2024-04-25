@@ -38,6 +38,7 @@ type DailyStore = {
     isFetchingData: boolean;
     setIsFetchingData: (value: boolean) => void;
     fetchedData: FetchedData;
+    setFetchedData: (value: FetchedData) => void;
 };
 
 const useDailyStore: UseBoundStore<StoreApi<DailyStore>> = create<DailyStore>(
@@ -99,7 +100,11 @@ const useDailyStore: UseBoundStore<StoreApi<DailyStore>> = create<DailyStore>(
             }),
         isFetchingData: false,
         setIsFetchingData: (value: boolean) => set({ isFetchingData: value }),
-        fetchedData: {},
+        fetchedData: {
+            apiTotalValue: "",
+            apiDiffValue: "",
+        },
+        setFetchedData: (value: FetchedData) => set({ fetchedData: value }),
     }),
 );
 

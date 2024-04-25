@@ -6,7 +6,9 @@ function TotalValue() {
     const dailyObject = useDailyStore((state) => state.dailyValues);
     const total = calcTotalSum(dailyObject);
     const formattedTotal = formatNumber(total);
-	const target = useDailyStore((state) => state.targetValue);
+    const apiTotalValue = useDailyStore(
+        (state) => state.fetchedData.apiTotalValue,
+    );
 
     return (
         <>
@@ -16,7 +18,10 @@ function TotalValue() {
                     <div data-testid="totalDisplayDiv" className="text-right">
                         {formattedTotal} €
                     </div>
-                    <ValidationIndicator currentValue={total.toFixed(2)} targetValue={target.toFixed(2)}/>
+                    <ValidationIndicator
+                        currentValue={total.toFixed(2)}
+                        targetValue={apiTotalValue}
+                    />
                 </div>
             </div>
         </>

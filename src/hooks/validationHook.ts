@@ -56,9 +56,14 @@ async function validationRequest() {
         body: JSON.stringify(requestPayload),
     };
 
-    await fetch("http://192.168.178.74:8002/api/v1/calculate", requestOptions)
+    await fetch("http://localhost:8080/api/v1/calculate", requestOptions)
         .then((response) => response.json())
-        .then((data) => console.log(data))
-        .then(() => useDailyStore.getState().setIsFetchingData(false))
+        .then((data) => {
+            useDailyStore.getState().setFetchedData({
+                apiTotalValue: data.responseValues.totalValue,
+                apiDiffValue: data.responseValues.differenceValue,
+            });
+            useDailyStore.getState().setIsFetchingData(false);
+        })
         .catch((error) => console.log("error", error));
 }
