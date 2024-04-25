@@ -13,7 +13,7 @@ function TargetValue() {
                         {formatNumber(targetValue)} €
                     </div>
 
-                    <ValidationIndicator />
+                    <ValidationIndicator targetValue={targetValue.toFixed(2)} currentValue={targetValue.toFixed(2)} />
                 </div>
             </div>
         </>

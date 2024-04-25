@@ -8,7 +8,7 @@ function DiffValue() {
     const target = useDailyStore((state) => state.targetValue);
     const dailyValues = useDailyStore((state) => state.dailyValues);
     const totalValue = calcTotalSum(dailyValues);
-    const diff = totalValue - target;
+    const diff = totalValue - target
     const formattedDiff = formatNumber(diff) || "0";
 
     const diffBgColor = () => {
@@ -36,7 +36,7 @@ function DiffValue() {
                     >
                         {formattedDiff} €
                     </div>
-                    <ValidationIndicator />
+                    <ValidationIndicator targetValue={target.toFixed(2)} currentValue={diff.toFixed(2)}/>
                 </div>
             </div>
         </>
