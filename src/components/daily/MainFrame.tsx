@@ -14,16 +14,11 @@ function MainFrame() {
         <>
             <main
                 data-testid="daily-main-body"
-                className="m-auto p-10 h-screen mb-1"
+                className="m-auto mb-1 h-screen p-10"
                 ref={mainBodyRef}
             >
                 <TopArea bodyRef={mainBodyRef} />
-                <div
-                    className="
-					flex
-					border border-blue-500
-					grow"
-                >
+                <div className=" flex grow border border-blue-500">
                     <WeeklyContainer />
                     <div className="grid grid-cols-8 border border-black">
                         <LabelColumn />

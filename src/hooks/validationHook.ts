@@ -56,7 +56,7 @@ async function validationRequest() {
         body: JSON.stringify(requestPayload),
     };
 
-    await fetch("http://localhost:8080/api/v1/calculate", requestOptions)
+    await fetch("http://192.168.178.74:8002/api/v1/calculate", requestOptions)
         .then((response) => response.json())
         .then((data) => {
             useDailyStore.getState().setFetchedData({
