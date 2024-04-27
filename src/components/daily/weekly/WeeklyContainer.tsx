@@ -1,5 +1,4 @@
 import { useWeeklyStore } from "../../../stores/weekly/weeklyStore";
-import { ExtraMoneyBoxes } from "./ExtraMoneyBoxes";
 import { ExtraMoneyRolls } from "./ExtraMoneyRolls";
 
 function WeeklyContainer() {
