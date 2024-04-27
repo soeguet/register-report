@@ -1,4 +1,5 @@
 import { useWeeklyStore } from "../../../stores/weekly/weeklyStore";
+import { ExtraMoneyBoxes } from "./ExtraMoneyBoxes";
 import { ExtraMoneyRolls } from "./ExtraMoneyRolls";
 
 function WeeklyContainer() {
@@ -6,9 +7,9 @@ function WeeklyContainer() {
     return (
         <>
             {isWeeklySelected && (
-                <div className="flex border border-red-500 bg-red-200">
-                    <ExtraMoneyRolls />
-                    {/* <ExtraMoneyBoxes /> */}
+                <div className="flex flex-col border border-red-500 bg-red-200">
+                        <ExtraMoneyRolls />
+                        <ExtraMoneyBoxes />
                 </div>
             )}
         </>
