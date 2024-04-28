@@ -1,18 +1,20 @@
+import { CustomBoxRowTotalLabel } from "./CustomBoxRowTotalLabel";
+
 function CoinBoxResultLabel() {
-    return (
-        <>
-            <div className="flex flex-col text-right w-20 mr-2">
-                <div className="m-0.5 border border-transparent">2 €</div>
-                <div className="m-0.5 border border-transparent">1 €</div>
-                <div className="m-0.5 border border-transparent">0,50 €</div>
-                <div className="m-0.5 border border-transparent">0,20 €</div>
-                <div className="m-0.5 border border-transparent">0,10 €</div>
-                <div className="m-0.5 border border-transparent">0,05 €</div>
-                <div className="m-0.5 border border-transparent">0,02 €</div>
-                <div className="m-0.5 border border-transparent">0,01 €</div>
-            </div>
-        </>
-    );
+	return (
+		<>
+			<div className="mr-2 flex w-20 flex-col text-right">
+				<CustomBoxRowTotalLabel coinsPerRoll={25} rollsPerBox={5} nominal="2_euro"/>
+				<CustomBoxRowTotalLabel coinsPerRoll={25} rollsPerBox={5} nominal="1_euro"/>
+				<CustomBoxRowTotalLabel coinsPerRoll={40} rollsPerBox={5} nominal="50_cent"/>
+				<CustomBoxRowTotalLabel coinsPerRoll={40} rollsPerBox={5} nominal="20_cent"/>
+				<CustomBoxRowTotalLabel coinsPerRoll={40} rollsPerBox={5} nominal="10_cent"/>
+				<CustomBoxRowTotalLabel coinsPerRoll={50} rollsPerBox={5} nominal="5_cent"/>
+				<CustomBoxRowTotalLabel coinsPerRoll={50} rollsPerBox={5} nominal="2_cent"/>
+				<CustomBoxRowTotalLabel coinsPerRoll={50} rollsPerBox={5} nominal="1_cent"/>
+			</div>
+		</>
+	);
 }
 
 export { CoinBoxResultLabel };

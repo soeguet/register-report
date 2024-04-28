@@ -9,11 +9,11 @@ function CustomLabel(props: CustomLabelProps) {
     const label = coinLabels[props.labelTitle];
     return (
         <>
-            <div className="text-right m-2  border border-transparent text-nowrap">
+            <div className="m-2 text-nowrap  border border-transparent text-right">
                 {label}
             </div>
             {props.labelTitle === "5_euro" && (
-                <div className="text-right font-extralight overflow-hidden text-nowrap">
+                <div className="overflow-hidden text-nowrap text-right font-extralight">
                     ----------------------------------------------
                 </div>
             )}
