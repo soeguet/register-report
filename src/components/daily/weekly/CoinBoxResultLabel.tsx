@@ -1,4 +1,4 @@
-function CoinsLabel() {
+function CoinBoxResultLabel() {
     return (
         <>
             <div className="flex flex-col text-right w-20 mr-2">
@@ -15,4 +15,4 @@ function CoinsLabel() {
     );
 }
 
-export { CoinsLabel };
+export { CoinBoxResultLabel };

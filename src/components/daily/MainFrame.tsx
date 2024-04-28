@@ -4,9 +4,9 @@ import { LabelColumn } from "./body/columns/LabelColumn.tsx";
 import { ValueColumn } from "./body/columns/ValueColumn.tsx";
 import { DateTimeDisplay } from "./bottom/DateTimeDisplay.tsx";
 import { ResultRow } from "./bottom/ResultRow.tsx";
-import { TopArea } from "./top/TopArea.tsx";
-import { WeeklyContainer } from "./weekly/WeeklyContainer.tsx";
-import React from "react";
+import { TopArea } from "./top/TopArea.tsx"
+import { WeeklyContainer } from "./weekly/WeeklyContainer.tsx"
+import React from 'react';
 
 function MainFrame() {
     const mainBodyRef = React.useRef(null);

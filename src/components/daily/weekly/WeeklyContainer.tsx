@@ -7,7 +7,7 @@ function WeeklyContainer() {
     return (
         <>
             {isWeeklySelected && (
-                <div className="flex flex-col border border-red-500 bg-red-200">
+                <div className="flex w-96 flex-col border border-red-500 bg-red-200">
                         <ExtraMoneyRolls />
                         <ExtraMoneyBoxes />
                 </div>

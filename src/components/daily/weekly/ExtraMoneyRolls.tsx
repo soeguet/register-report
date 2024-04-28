@@ -1,12 +1,14 @@
+import { CoinRollResultLabel } from "./CoinRollResultLabel";
+import { CoinRollsTotalLabel } from "./CoinRollsTotalLabel";
 import { CoinsLabel } from "./CoinsLabel";
 
 function ExtraMoneyRolls() {
-    return (
-        <>
-            <div className="flex-col text-nowrap bg-cyan-300">
+	return (
+		<>
+			<div className="flex-col text-nowrap bg-cyan-300">
 				<div className="flex">
 					<CoinsLabel />
-					<div className="flex flex-col">
+					<div className="flex w-20 flex-col">
 						<input
 							type="number"
 							className=" m-0.5 border border-black "
@@ -40,7 +42,7 @@ function ExtraMoneyRolls() {
 							className=" m-0.5 border border-black "
 						/>
 					</div>
-					<div className="flex flex-col">
+					<div className="flex w-20 flex-col">
 						<input
 							type="number"
 							className=" m-0.5 border border-black "
@@ -74,11 +76,12 @@ function ExtraMoneyRolls() {
 							className=" m-0.5 border border-black "
 						/>
 					</div>
+					<CoinRollResultLabel />
 				</div>
-				<div className="text-right mr-5">RESULT</div>
-            </div>
-        </>
-    );
+				<CoinRollsTotalLabel />
+			</div>
+		</>
+	);
 }
 
 export { ExtraMoneyRolls };
