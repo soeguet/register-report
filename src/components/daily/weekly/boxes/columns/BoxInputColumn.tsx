@@ -3,7 +3,7 @@ import { CustomBoxInput } from "../CustomBoxInput";
 function BoxInputColumn() {
     return (
         <>
-            <div className="flex w-40 flex-col">
+            <div className="flex flex-col">
 				<CustomBoxInput nominal="2_euro" index={0} />
 				<CustomBoxInput nominal="1_euro" index={0} />
 				<CustomBoxInput nominal="50_cent" index={0} />

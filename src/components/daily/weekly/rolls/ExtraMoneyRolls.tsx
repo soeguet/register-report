@@ -1,6 +1,7 @@
 import { CoinRollResultLabel } from "./columns/CoinRollResultLabel";
 import { CoinRollsTotalLabel } from "./columns/CoinRollsTotalLabel";
 import { CoinsLabel } from "./columns/CoinsLabel";
+import { RollsInputColumn } from "./columns/RollsInputColumn";
 
 function ExtraMoneyRolls() {
 	return (
@@ -8,73 +9,9 @@ function ExtraMoneyRolls() {
 			<div className="flex-col text-nowrap bg-cyan-300">
 				<div className="flex">
 					<CoinsLabel />
-					<div className="flex w-20 flex-col">
-						<input
-							type="number"
-							className=" m-0.5 border border-black "
-						/>
-						<input
-							type="number"
-							className=" m-0.5 border border-black "
-						/>
-						<input
-							type="number"
-							className=" m-0.5 border border-black "
-						/>
-						<input
-							type="number"
-							className=" m-0.5 border border-black "
-						/>
-						<input
-							type="number"
-							className=" m-0.5 border border-black "
-						/>
-						<input
-							type="number"
-							className=" m-0.5 border border-black "
-						/>
-						<input
-							type="number"
-							className=" m-0.5 border border-black "
-						/>
-						<input
-							type="number"
-							className=" m-0.5 border border-black "
-						/>
-					</div>
-					<div className="flex w-20 flex-col">
-						<input
-							type="number"
-							className=" m-0.5 border border-black "
-						/>
-						<input
-							type="number"
-							className=" m-0.5 border border-black "
-						/>
-						<input
-							type="number"
-							className=" m-0.5 border border-black "
-						/>
-						<input
-							type="number"
-							className=" m-0.5 border border-black "
-						/>
-						<input
-							type="number"
-							className=" m-0.5 border border-black "
-						/>
-						<input
-							type="number"
-							className=" m-0.5 border border-black "
-						/>
-						<input
-							type="number"
-							className=" m-0.5 border border-black "
-						/>
-						<input
-							type="number"
-							className=" m-0.5 border border-black "
-						/>
+					<div className="flex">
+						<RollsInputColumn index={0} />
+						<RollsInputColumn index={1} />
 					</div>
 					<CoinRollResultLabel />
 				</div>

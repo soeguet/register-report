@@ -71,16 +71,18 @@ const useWeeklyStore: UseBoundStore<StoreApi<useWeeklyStoreType>> =
 					"1_cent": Array(2).fill(0),
 				},
 			}),
-		handleBoxChange: (value: number, nominal: WeeklyObjectNominal) =>
+		handleBoxChange: (value: string, nominal: WeeklyObjectNominal) =>
 			set((state) => {
 				const newValues = { ...state.boxValues };
-				newValues[nominal] = Array(1).fill(value);
+				const newValue = parseInt(value);
+				newValues[nominal] = Array(1).fill(newValue);
 				return { boxValues: newValues };
 			}),
-		handleRollChange: (value: number, nominal: WeeklyObjectNominal) =>
+		handleRollChange: (value: string, nominal: WeeklyObjectNominal) =>
 			set((state) => {
 				const newValues = { ...state.rollValues };
-				newValues[nominal] = Array(2).fill(value);
+				const newValue = parseInt(value);
+				newValues[nominal] = Array(2).fill(newValue);
 				return { rollValues: newValues };
 			}),
 	}));
