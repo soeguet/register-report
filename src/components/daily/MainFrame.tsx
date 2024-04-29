@@ -5,8 +5,8 @@ import { ValueColumn } from "./body/columns/ValueColumn.tsx";
 import { DateTimeDisplay } from "./bottom/DateTimeDisplay.tsx";
 import { ResultRow } from "./bottom/ResultRow.tsx";
 import { TopArea } from "./top/TopArea.tsx";
-import { WeeklyContainer } from "./weekly/WeeklyContainer.tsx";
 import React from "react";
+import { WeeklyContainer } from "./weekly/WeeklyContainer.tsx";
 
 function MainFrame() {
 	const mainBodyRef = React.useRef(null);

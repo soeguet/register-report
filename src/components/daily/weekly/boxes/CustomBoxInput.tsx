@@ -1,4 +1,4 @@
-import { WeeklyObjectNominal, useWeeklyStore } from "../../../stores/weekly/weeklyStore";
+import { WeeklyObjectNominal, useWeeklyStore } from "../../../../stores/weekly/weeklyStore";
 
 
 type CustomInputFieldProps = {

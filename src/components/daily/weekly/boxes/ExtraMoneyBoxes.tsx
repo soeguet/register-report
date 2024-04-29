@@ -1,7 +1,7 @@
-import { BoxInputColumn } from "./BoxInputColumn";
+import { BoxInputColumn } from "./columns/BoxInputColumn";
 import { CoinBoxResultLabel } from "./CoinBoxResultLabel";
 import { CoinBoxesTotalLabel } from "./CoinBoxesTotalLabel";
-import { CoinsLabel } from "./CoinsLabel";
+import { CoinsLabel } from "../rolls/columns/CoinsLabel";
 
 function ExtraMoneyBoxes() {
 	return (

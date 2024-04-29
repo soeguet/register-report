@@ -1,8 +1,8 @@
 import {
 	WeeklyObjectNominal,
 	useWeeklyStore,
-} from "../../../stores/weekly/weeklyStore";
-import { coinValues } from "../../../utils/customTypes";
+} from "../../../../stores/weekly/weeklyStore";
+import { coinValues } from "../../../../utils/customTypes";
 
 type CustomBoxRowTotalLabelProps = {
 	nominal: WeeklyObjectNominal;

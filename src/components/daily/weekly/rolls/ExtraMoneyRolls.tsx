@@ -1,6 +1,6 @@
-import { CoinRollResultLabel } from "./CoinRollResultLabel";
-import { CoinRollsTotalLabel } from "./CoinRollsTotalLabel";
-import { CoinsLabel } from "./CoinsLabel";
+import { CoinRollResultLabel } from "./columns/CoinRollResultLabel";
+import { CoinRollsTotalLabel } from "./columns/CoinRollsTotalLabel";
+import { CoinsLabel } from "./columns/CoinsLabel";
 
 function ExtraMoneyRolls() {
 	return (
