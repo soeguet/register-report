@@ -1,9 +1,9 @@
 import { CustomBoxInput } from "../CustomBoxInput";
 
 function BoxInputColumn() {
-    return (
-        <>
-            <div className="flex flex-col">
+	return (
+		<>
+			<div className="flex  flex-col">
 				<CustomBoxInput nominal="2_euro" index={0} />
 				<CustomBoxInput nominal="1_euro" index={0} />
 				<CustomBoxInput nominal="50_cent" index={0} />
@@ -12,9 +12,9 @@ function BoxInputColumn() {
 				<CustomBoxInput nominal="5_cent" index={0} />
 				<CustomBoxInput nominal="2_cent" index={0} />
 				<CustomBoxInput nominal="1_cent" index={0} />
-            </div>
-        </>
-    );
+			</div>
+		</>
+	);
 }
 
 export { BoxInputColumn };

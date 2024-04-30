@@ -7,7 +7,7 @@ type RollsInputColumnProps = {
 function RollsInputColumn(props:RollsInputColumnProps) {
     return (
         <>
-            <div className="flex w-20 flex-col">
+            <div className="flex flex-col">
 				<CustomRollInput index={props.index} nominal="2_euro" />
 				<CustomRollInput index={props.index} nominal="1_euro" />
 				<CustomRollInput index={props.index} nominal="50_cent" />

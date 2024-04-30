@@ -1,7 +1,7 @@
 function CoinsLabel() {
     return (
         <>
-            <div className="mr-2 flex w-20 flex-col text-right">
+            <div className="mx-2 flex flex-col text-right">
                 <div className="m-0.5 border border-transparent">2 €</div>
                 <div className="m-0.5 border border-transparent">1 €</div>
                 <div className="m-0.5 border border-transparent">0,50 €</div>
