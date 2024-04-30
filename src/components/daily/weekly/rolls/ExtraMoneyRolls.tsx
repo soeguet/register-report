@@ -1,4 +1,5 @@
-import { CoinRollResultLabel } from "./columns/CoinRollResultLabel";
+import { CoinRollAmountResultColumn } from "./columns/CoinRollAmountResultColumn";
+import { CoinRollValueResultColumn } from "./columns/CoinRollValueResultColumn";
 import { CoinRollsTotalLabel } from "./columns/CoinRollsTotalLabel";
 import { CoinsLabel } from "./columns/CoinsLabel";
 import { RollsInputColumn } from "./columns/RollsInputColumn";
@@ -13,7 +14,8 @@ function ExtraMoneyRolls() {
                         <RollsInputColumn index={0} />
                         <RollsInputColumn index={1} />
                     </div>
-                    <CoinRollResultLabel />
+					<CoinRollAmountResultColumn />
+					<CoinRollValueResultColumn />
                 </div>
                 <CoinRollsTotalLabel />
             </div>

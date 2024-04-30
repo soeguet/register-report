@@ -21,7 +21,7 @@ type useWeeklyStoreType = {
 	rollValues: WeeklyObjectType;
 	resetValues: () => void;
 	handleBoxChange: (value: string, nominal: WeeklyObjectNominal) => void;
-	handleRollChange: (value: string, nominal: WeeklyObjectNominal) => void;
+	handleRollChange: (value: string, index: number, nominal: WeeklyObjectNominal) => void;
 };
 
 const useWeeklyStore: UseBoundStore<StoreApi<useWeeklyStoreType>> =
@@ -78,13 +78,29 @@ const useWeeklyStore: UseBoundStore<StoreApi<useWeeklyStoreType>> =
 				newValues[nominal] = Array(1).fill(newValue);
 				return { boxValues: newValues };
 			}),
-		handleRollChange: (value: string, nominal: WeeklyObjectNominal) =>
+		handleRollChange: (value: string, index: number, nominal: WeeklyObjectNominal) =>
 			set((state) => {
+				const newValue = parseInt(value,10);
+
 				const newValues = { ...state.rollValues };
-				const newValue = parseInt(value);
-				newValues[nominal] = Array(2).fill(newValue);
+				// deep copy of the array
+				newValues[nominal] = [...newValues[nominal]];
+				newValues[nominal][index] = newValue;
 				return { rollValues: newValues };
 			}),
+		// set((state) => {
+		//     const parsedValue = parseInt(value, 10);
+		//
+		//     const newDailyValues = {
+		//         ...state.dailyValues,
+		//     };
+		//     // deep copy of the array
+		//     newDailyValues[nominal] = [...newDailyValues[nominal]];
+		//     newDailyValues[nominal][index] = parsedValue;
+		//
+		//     return { dailyValues: newDailyValues };
+		// }),
+
 	}));
 
 export { useWeeklyStore };

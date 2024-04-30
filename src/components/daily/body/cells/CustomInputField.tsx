@@ -9,7 +9,7 @@ type CustomInputFieldProps = {
 };
 
 function CustomInputField(props: CustomInputFieldProps) {
-	const handleChange = useDailyStore((state) => state.handleChange);
+const handleChange = useDailyStore((state) => state.handleChange);
 	const thisValue = useDailyStore(
 		(state) => state.dailyValues[props.nominal][props.index],
 	);
