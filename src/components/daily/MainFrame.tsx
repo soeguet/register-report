@@ -5,7 +5,7 @@ import { LabelColumn } from "./body/columns/LabelColumn.tsx";
 import { ValueColumn } from "./body/columns/ValueColumn.tsx";
 import { DateTimeDisplay } from "./bottom/DateTimeDisplay.tsx";
 import { ResultRow } from "./bottom/ResultRow.tsx";
-import { ResultRowWeekly } from "./bottom/ResultRowWeekly.tsx";
+import { ResultRowWeekly } from "./weekly/result/ResultRowWeekly.tsx";
 import { TopArea } from "./top/TopArea.tsx";
 import { WeeklyContainer } from "./weekly/WeeklyContainer.tsx";
 import React from "react";
