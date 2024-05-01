@@ -28,15 +28,11 @@ function ValueLabel(props: ValueLabelProps) {
 		<>
 			<div
 				data-testid={`value-label-${props.nominal}`}
-				className="m-2 text-nowrap border border-transparent text-right"
+				className="m-0.5 text-nowrap border-2 border-transparent text-right"
 			>
 				{formatNumber(amount)} €
 			</div>
-			{props.nominal === "5_euro" && (
-				<div className="overflow-hidden text-nowrap text-right font-extralight ">
-					--------------------------------------------------
-				</div>
-			)}
+			{props.nominal === "5_euro" && <div className="py-2 "></div>}
 		</>
 	);
 }

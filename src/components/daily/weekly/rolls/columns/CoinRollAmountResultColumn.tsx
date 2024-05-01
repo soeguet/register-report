@@ -3,7 +3,7 @@ import { CustomRollRowAmountLabel } from "./CustomRollRowAmountLabel";
 function CoinRollAmountResultColumn() {
 	return (
 		<>
-			<div className="mr-2 flex flex-col text-right">
+			<div className="mr-2 flex grow flex-col text-right">
 				<CustomRollRowAmountLabel coinsPerRoll={25} nominal="2_euro" />
 				<CustomRollRowAmountLabel coinsPerRoll={25} nominal="1_euro" />
 				<CustomRollRowAmountLabel coinsPerRoll={40} nominal="50_cent" />

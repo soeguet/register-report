@@ -3,7 +3,7 @@ import { AmountLabel } from "../cells/AmountLabel.tsx";
 function AmountColumn() {
     return (
         <>
-            <div className="p-2">
+            <div className="flex flex-col justify-center">
                 <AmountLabel nominal={"200_euro"} />
                 <AmountLabel nominal={"100_euro"} />
                 <AmountLabel nominal={"50_euro"} />

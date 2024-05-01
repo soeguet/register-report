@@ -3,7 +3,7 @@ import { CustomBoxRowTotalLabel } from "../CustomBoxRowTotalLabel";
 function CoinBoxResultLabelColumn() {
 	return (
 		<>
-			<div className="mr-2 flex flex-col text-right">
+			<div className="mr-2 flex shrink flex-col text-right">
 				<CustomBoxRowTotalLabel
 					coinsPerRoll={25}
 					rollsPerBox={5}

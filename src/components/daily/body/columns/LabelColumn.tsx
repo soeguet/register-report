@@ -3,7 +3,7 @@ import { CustomLabel } from "../cells/CustomLabel.tsx";
 function LabelColumn() {
 	return (
 		<>
-			<div className="p-2">
+			<div className="flex flex-col justify-center text-nowrap">
 				<CustomLabel labelTitle={"200_euro"} />
 				<CustomLabel labelTitle={"100_euro"} />
 				<CustomLabel labelTitle={"50_euro"} />

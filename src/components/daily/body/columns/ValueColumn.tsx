@@ -3,7 +3,7 @@ import { ValueLabel } from "../cells/ValueLabel.tsx";
 function ValueColumn() {
     return (
         <>
-            <div className="p-2">
+            <div className="flex flex-col justify-center">
                 <ValueLabel nominal={"200_euro"} />
                 <ValueLabel nominal={"100_euro"} />
                 <ValueLabel nominal={"50_euro"} />

@@ -16,7 +16,7 @@ function CustomBoxInput(props: CustomInputFieldProps) {
 
 	return (
 		<>
-			<div className="m-0.5 mr-2 w-12">
+			<div className="m-0.5 " style={{ maxWidth: "100px" }}>
 				<input
 					id={`${props.nominal}-${props.index}`}
 					data-testid={`${props.nominal}-${props.index}`}

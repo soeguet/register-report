@@ -2,20 +2,10 @@ import { DiffValue } from "./result/DiffValue.tsx";
 import { TargetValue } from "./result/TargetValue.tsx";
 import { TotalValue } from "./result/TotalValue.tsx";
 
-export type RequestPayload = {
-	payloadType: number;
-	requestValidation: {
-		targetValue: number;
-	};
-	requestValues: {
-		euro200: number;
-	};
-};
-
-function ResultRow() {
+function ResultRowWeekly() {
 	return (
 		<>
-			<div className="flex flex-col text-nowrap p-5">
+			<div className="flex flex-col text-nowrap bg-blue-400 p-5">
 				<TargetValue />
 				<TotalValue />
 				<DiffValue />
@@ -24,4 +14,4 @@ function ResultRow() {
 	);
 }
 
-export { ResultRow };
+export { ResultRowWeekly };

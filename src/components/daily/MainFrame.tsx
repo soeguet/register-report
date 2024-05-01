@@ -1,26 +1,29 @@
+import { useWeeklyStore } from "../../stores/weekly/weeklyStore.ts";
 import { AmountColumn } from "./body/columns/AmountColumn.tsx";
 import { InputColumn } from "./body/columns/InputColumn.tsx";
 import { LabelColumn } from "./body/columns/LabelColumn.tsx";
 import { ValueColumn } from "./body/columns/ValueColumn.tsx";
 import { DateTimeDisplay } from "./bottom/DateTimeDisplay.tsx";
 import { ResultRow } from "./bottom/ResultRow.tsx";
+import { ResultRowWeekly } from "./bottom/ResultRowWeekly.tsx";
 import { TopArea } from "./top/TopArea.tsx";
-import React from "react";
 import { WeeklyContainer } from "./weekly/WeeklyContainer.tsx";
+import React from "react";
 
 function MainFrame() {
 	const mainBodyRef = React.useRef(null);
+	const weeklySelected = useWeeklyStore((state) => state.isSelected);
 	return (
 		<>
 			<main
 				data-testid="daily-main-body"
-				className="m-auto mb-1 h-screen p-10"
+				className="p-10"
 				ref={mainBodyRef}
 			>
 				<TopArea bodyRef={mainBodyRef} />
-				<div className=" flex grow border border-blue-500">
+				<div className="flex shrink justify-center gap-5 overflow-hidden rounded-xl border-2 border-black">
 					<WeeklyContainer />
-					<div className="grid grid-cols-8 border border-black">
+					<div className="flex content-center gap-2 p-3 align-middle">
 						<LabelColumn />
 						<InputColumn idName="input-column-1" index={0} />
 						<InputColumn idName="input-column-2" index={1} />
@@ -31,8 +34,8 @@ function MainFrame() {
 						<ValueColumn />
 					</div>
 				</div>
-				<div className="flex justify-evenly">
-					<ResultRow />
+				<div className="flex justify-center gap-20">
+					{weeklySelected ? <ResultRowWeekly /> : <ResultRow />}
 					<DateTimeDisplay />
 				</div>
 			</main>

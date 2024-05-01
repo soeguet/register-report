@@ -5,6 +5,7 @@ const config = {
         "@trivago/prettier-plugin-sort-imports",
     ],
     trailingComma: "all",
+    useTabs: true,
     tabWidth: 4,
     semi: true,
     singleQuote: false,

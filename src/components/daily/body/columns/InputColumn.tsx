@@ -8,7 +8,7 @@ type InputColumnProps = {
 function InputColumn(props: InputColumnProps) {
     return (
         <>
-            <div id={props.idName} className="gap-1 text-nowrap p-2">
+            <div id={props.idName} className="flex flex-col justify-center">
                 <CustomInputField nominal={"200_euro"} index={props.index} />
                 <CustomInputField nominal={"100_euro"} index={props.index} />
                 <CustomInputField nominal={"50_euro"} index={props.index} />

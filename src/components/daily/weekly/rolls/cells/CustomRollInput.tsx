@@ -16,11 +16,12 @@ function CustomRollInput(props: CustomInputFieldProps) {
 
 	return (
 		<>
-			<div className="m-0.5">
+			<div className="m-0.5" style={{ maxWidth: "100px" }}>
 				<input
 					id={`${props.nominal}-${props.index}`}
 					data-testid={`${props.nominal}-${props.index}`}
-					className="box-border w-full border border-black text-right "
+					className="box-border border border-black text-right "
+					style={{ maxWidth: "80px" }}
 					key={`${props.nominal}-${props.index}`}
 					type={"number"}
 					value={thisValue}
