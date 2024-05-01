@@ -1,4 +1,4 @@
-import { CustomBoxInput } from "../CustomBoxInput";
+import { CustomBoxInput } from "../cells/CustomBoxInput";
 
 function BoxInputColumn() {
 	return (

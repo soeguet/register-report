@@ -1,5 +1,5 @@
 import { CoinsLabel } from "../rolls/columns/CoinsLabel";
-import { CoinBoxesTotalLabel } from "./CoinBoxesTotalLabel";
+import { CoinBoxesTotalLabel } from "./cells/CoinBoxesTotalLabel";
 import { BoxInputColumn } from "./columns/BoxInputColumn";
 import { CoinBoxAmountLabelColumn } from "./columns/CoinBoxAmountLabelColumn";
 import { CoinBoxResultLabelColumn } from "./columns/CoinBoxResultLabelColumn";

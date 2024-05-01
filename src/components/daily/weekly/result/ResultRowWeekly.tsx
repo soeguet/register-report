@@ -1,17 +1,22 @@
+import { DiffValueWeekly } from "./DiffValueWeekly.tsx";
 import { TargetValueWeekly } from "./TargetValueWeekly.tsx";
-import { DiffValue } from "../../bottom/result/DiffValue.tsx";
 import { TotalValueWeekly } from "./TotalValueWeekly.tsx";
 
 function ResultRowWeekly() {
-	return (
-		<>
-			<div className="flex flex-col text-nowrap bg-blue-400 p-5">
-				<TargetValueWeekly />
-				<TotalValueWeekly />
-				<DiffValue />
-			</div>
-		</>
-	);
+    return (
+        <>
+            <div className="relative flex">
+                <div className="absolute -left-7 top-5 -rotate-90 ">
+                    total
+                </div>
+                <div className="flex flex-col text-nowrap p-5">
+                    <TargetValueWeekly />
+                    <TotalValueWeekly />
+                    <DiffValueWeekly />
+                </div>
+            </div>
+        </>
+    );
 }
 
 export { ResultRowWeekly };

@@ -1,11 +1,10 @@
 import {
     WeeklyObjectNominal,
     useWeeklyStore,
-} from "../../../../stores/weekly/weeklyStore";
-import { coinValues } from "../../../../utils/customTypes";
-import { determineBoxFactor } from "../../../../utils/boxFactor";
-import { determineRollFactor } from "../../../../utils/rollFactor";
-import { formatNumber } from "../../../../utils/converter";
+} from "../../../../../stores/weekly/weeklyStore";
+import { coinValues } from "../../../../../utils/customTypes";
+import { determineBoxFactor } from "../../../../../utils/boxFactor";
+import { formatNumber } from "../../../../../utils/converter";
 
 function CoinBoxesTotalLabel() {
     const boxValues = useWeeklyStore((state) => state.boxValues);
@@ -18,7 +17,7 @@ function CoinBoxesTotalLabel() {
                 const sum = values.reduce((acc, value) => acc + value, 0);
                 const nominalKey = nominal as WeeklyObjectNominal;
                 const boxFactor = determineBoxFactor(nominalKey);
-                const rollFactor = determineRollFactor(nominalKey);
+                const rollFactor = coinValues[nominalKey];
                 const coinValue = coinValues[nominalKey];
                 const totalValue = sum * coinValue * boxFactor * rollFactor;
                 total += totalValue;

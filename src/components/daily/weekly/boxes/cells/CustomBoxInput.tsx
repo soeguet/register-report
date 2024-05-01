@@ -1,7 +1,7 @@
 import {
 	WeeklyObjectNominal,
 	useWeeklyStore,
-} from "../../../../stores/weekly/weeklyStore";
+} from "../../../../../stores/weekly/weeklyStore";
 
 type CustomInputFieldProps = {
 	nominal: WeeklyObjectNominal;
@@ -20,7 +20,7 @@ function CustomBoxInput(props: CustomInputFieldProps) {
 				<input
 					id={`${props.nominal}-${props.index}`}
 					data-testid={`${props.nominal}-${props.index}`}
-					className="box-border w-full border border-black text-right "
+                    className="box-border w-full border-2 border-black text-right transition-all duration-500 ease-in-out focus:rounded-l focus:bg-blue-200 focus:outline-none"
 					key={`${props.nominal}-${props.index}`}
 					type={"number"}
 					value={thisValue}

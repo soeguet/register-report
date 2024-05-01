@@ -25,7 +25,7 @@ function TargetInputField() {
         <>
             <div className="flex">
                 <span className="m-auto ml-6 font-extralight"> || </span>
-                <label htmlFor="targetValueInput" className="ml-6 my-auto">
+                <label htmlFor="targetValueInput" className="my-auto ml-6">
                     target value:
                 </label>
                 <input
@@ -37,7 +37,7 @@ function TargetInputField() {
                     placeholder="0.00"
                     value={targetValue || ""}
                     onChange={onChangeHandler}
-                    className={"ml-3 border text-center my-auto"}
+                    className={"my-auto ml-3 border text-center"}
                 />
                 <span className="my-auto ml-1">€</span>
             </div>

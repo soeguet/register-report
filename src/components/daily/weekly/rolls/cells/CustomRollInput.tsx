@@ -20,7 +20,7 @@ function CustomRollInput(props: CustomInputFieldProps) {
 				<input
 					id={`${props.nominal}-${props.index}`}
 					data-testid={`${props.nominal}-${props.index}`}
-					className="box-border border border-black text-right "
+                    className="box-border w-full border-2 border-black text-right transition-all duration-500 ease-in-out focus:rounded-l focus:bg-blue-200 focus:outline-none"
 					style={{ maxWidth: "80px" }}
 					key={`${props.nominal}-${props.index}`}
 					type={"number"}

@@ -1,9 +1,17 @@
 import { useDailyStore } from "../../../../stores/daily/dailyStore";
+import { useWeeklyStore } from "../../../../stores/weekly/weeklyStore";
 import { calcTotalSum, formatNumber } from "../../../../utils/converter";
 import { ValidationIndicator } from "../../bottom/result/ValidationIndicator";
+import { calculateValueOfAllRollCoins } from "../rolls/cells/CustomRollRowResultLabel";
 
 function TotalValueWeekly() {
+    const rollsObject = useWeeklyStore((state) => state.rollValues);
+    const boxesObject = useWeeklyStore((state) => state.boxValues);
     const dailyObject = useDailyStore((state) => state.dailyValues);
+
+    const totalDailyValue = calcTotalSum(dailyObject);
+    const totalRollValue = calculateValueOfAllRollCoins(k, rollFactor, values);
+
     const total = calcTotalSum(dailyObject);
     const formattedTotal = formatNumber(total);
     const apiTotalValue = useDailyStore(
@@ -16,7 +24,7 @@ function TotalValueWeekly() {
                 <div className="mr-5">total</div>
                 <div className="flex">
                     <div data-testid="totalDisplayDiv" className="text-right">
-                        {formattedTotal} €
+                        {totalDailyValue} €
                     </div>
                     <ValidationIndicator
                         currentValue={total.toFixed(2)}

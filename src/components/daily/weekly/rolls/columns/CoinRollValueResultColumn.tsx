@@ -1,4 +1,4 @@
-import { CustomRollRowResultLabel } from "./CustomRollRowResultLabel.tsx";
+import { CustomRollRowResultLabel } from "../cells/CustomRollRowResultLabel.tsx";
 
 function CoinRollValueResultColumn() {
 	return (

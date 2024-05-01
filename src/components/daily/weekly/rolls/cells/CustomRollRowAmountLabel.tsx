@@ -22,7 +22,7 @@ function CustomRollRowAmountLabel(props: CustomRollRowAmountLabelProps) {
                 <div className="shrink content-center text-xs text-gray-500">
                     {props.coinsPerRoll}x
                 </div>
-				<div className="mx-2 my-0.5 border border-transparent text-right">
+				<div className="mx-2 my-0.5 border-2 border-transparent text-right">
 
 					{sumTotalAmount} x
 				</div>

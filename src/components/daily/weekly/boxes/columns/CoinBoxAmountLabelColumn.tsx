@@ -1,4 +1,4 @@
-import { CustomBoxRowAmountLabel } from "../CustomBoxRowAmountLabel";
+import { CustomBoxRowAmountLabel } from "../cells/CustomBoxRowAmountLabel";
 
 function CoinBoxAmountLabelColumn() {
 	return (

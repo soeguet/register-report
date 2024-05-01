@@ -1,6 +1,6 @@
 import { CoinRollAmountResultColumn } from "./columns/CoinRollAmountResultColumn";
 import { CoinRollValueResultColumn } from "./columns/CoinRollValueResultColumn";
-import { CoinRollsTotalLabel } from "./columns/CoinRollsTotalLabel";
+import { CoinRollsTotalLabel } from "./cells/CoinRollsTotalLabel";
 import { CoinsLabel } from "./columns/CoinsLabel";
 import { RollsInputColumn } from "./columns/RollsInputColumn";
 

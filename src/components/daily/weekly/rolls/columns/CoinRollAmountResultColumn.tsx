@@ -1,4 +1,4 @@
-import { CustomRollRowAmountLabel } from "./CustomRollRowAmountLabel";
+import { CustomRollRowAmountLabel } from "../cells/CustomRollRowAmountLabel";
 
 function CoinRollAmountResultColumn() {
 	return (
