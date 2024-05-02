@@ -26,7 +26,7 @@ type useWeeklyStoreType = {
 
 const useWeeklyStore: UseBoundStore<StoreApi<useWeeklyStoreType>> =
 	create<useWeeklyStoreType>((set) => ({
-		isSelected: true,
+		isSelected: false,
 		setSelected: (isSelected: boolean) => set({ isSelected }),
 		boxValues: {
 			"2_euro": Array(1).fill(0),

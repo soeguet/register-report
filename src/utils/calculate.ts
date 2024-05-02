@@ -23,7 +23,7 @@ export function calculateValueOfAllCoins(
 * @param rollValues the values of the coins
 * @returns the total value of all coins in the given rolls
 */
-function calculateTotalRollValue(rollValues: WeeklyObjectType) {
+export function calculateTotalRollValue(rollValues: WeeklyObjectType) {
     let total = 0;
     Object.entries(rollValues).forEach(
         ([nominal, values]: [string, number[]]) => {
