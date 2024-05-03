@@ -5,7 +5,7 @@ import { TotalValue } from "./result/TotalValue.tsx";
 export type RequestPayload = {
 	payloadType: number;
 	requestValidation: {
-		targetValue: number;
+		targetValue: string;
 	};
 	requestValues: {
 		euro200: number;
