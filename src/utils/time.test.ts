@@ -1,6 +1,7 @@
 import { getCurrentDateTime } from "./time";
 import { expect, test, describe } from "vitest";
 
+
 describe("time function", () => {
     test("check if time string in right format", () => {
         const timeString = getCurrentDateTime();
@@ -8,7 +9,7 @@ describe("time function", () => {
         expect(regex.test(timeString)).toBe(true);
     });
 
-    test("check if time string corret information", () => {
+    test("flakey test - check if time string corret information", () => {
         const timeString = getCurrentDateTime();
         const now = new Date();
 

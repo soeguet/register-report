@@ -10,7 +10,7 @@ import { coinAmounts, coinValues } from "./customTypes";
 export function calculateValueOfAllCoins(
     nominal: WeeklyObjectNominal,
     inputValuesAsArray: number[],
-) {
+): number {
     const amountOfTotalCoins = inputValuesAsArray.reduce((acc, value) => acc + value, 0);
     const coinsPerRoll = coinAmounts[nominal];
     const valueOfCoins = coinValues[nominal];
@@ -23,13 +23,13 @@ export function calculateValueOfAllCoins(
 * @param rollValues the values of the coins
 * @returns the total value of all coins in the given rolls
 */
-export function calculateTotalRollValue(rollValues: WeeklyObjectType) {
+export function calculateTotalRollValue(rollValues: WeeklyObjectType): number {
     let total = 0;
     Object.entries(rollValues).forEach(
         ([nominal, values]: [string, number[]]) => {
             const sum = values.reduce((acc, value) => acc + value, 0);
             const nominalKey = nominal as WeeklyObjectNominal;
-            const rollFactor = coinValues[nominalKey];
+            const rollFactor = coinAmounts[nominalKey];
             const coinValue = coinValues[nominalKey];
             const totalValue = sum * coinValue * rollFactor;
             total += totalValue;
