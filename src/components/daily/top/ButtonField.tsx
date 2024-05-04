@@ -1,5 +1,7 @@
 import { PdfButton } from "./buttons/PdfButton.tsx";
 import { ResetButton } from "./buttons/ResetButton.tsx";
+import html2canvas from "html2canvas";
+import { jsPDF } from "jspdf";
 
 type ButtonFieldProps = {
     bodyRef: React.RefObject<HTMLDivElement>;
@@ -8,8 +10,12 @@ type ButtonFieldProps = {
 function ButtonField(props: ButtonFieldProps) {
     return (
         <>
-            <span className="inline-flex my-2">
-                <PdfButton bodyRef={props.bodyRef} />
+            <span className="my-2 inline-flex">
+                <PdfButton
+                    bodyRef={props.bodyRef}
+                    html2canvas={html2canvas}
+                    jsPDF={jsPDF}
+                />
                 <div className="px-3 py-2"></div>
                 <ResetButton />
             </span>
@@ -18,4 +24,3 @@ function ButtonField(props: ButtonFieldProps) {
 }
 
 export { ButtonField };
-
