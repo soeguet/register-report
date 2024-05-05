@@ -19,11 +19,11 @@ function CustomBoxRowAmountLabel(props: CustomBoxRowTotalLabelProps) {
 
 	return (
 		<>
-			<div className="flex justify-between gap-2">
+			<div className="flex justify-between gap-2 ">
 				<div className="shrink content-center text-xs text-gray-500">
 					{props.coinsPerRoll}x {rollsPerBox}x
 				</div>
-				<div className="mx-2 my-0.5 border-2 border-transparent text-right">
+				<div className="mx-2 my-0.5 w-16 border-2 border-transparent text-right">
 					{sumTotalAmount} x
 				</div>
 			</div>

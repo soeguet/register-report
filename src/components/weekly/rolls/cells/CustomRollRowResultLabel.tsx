@@ -22,7 +22,7 @@ function CustomRollRowResultLabel(props: CustomRollRowResultLabelProps) {
 
     return (
         <>
-            <div className="mx-2 my-0.5 border-2 border-transparent text-right">
+            <div className="mx-2 my-0.5 w-28 border-2 border-transparent text-right">
                 {sumTotalValueFormatted} €
             </div>
         </>

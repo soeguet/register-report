@@ -1,12 +1,12 @@
-import {
-    useWeeklyStore,
-} from "../../../../stores/weekly/weeklyStore";
+import { useWeeklyStore } from "../../../../stores/weekly/weeklyStore";
 import { formatNumber } from "../../../../utils/converter";
 import { calculateTotalBoxValue } from "../../../../utils/calculate";
 
 function CoinBoxesTotalLabel() {
     const boxValues = useWeeklyStore((state) => state.boxValues);
-	const calculatedValueAsString = formatNumber(calculateTotalBoxValue(boxValues));
+    const calculatedValueAsString = formatNumber(
+        calculateTotalBoxValue(boxValues),
+    );
 
     return (
         <>

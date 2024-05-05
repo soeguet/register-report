@@ -18,12 +18,10 @@ function CustomRollRowAmountLabel(props: CustomRollRowAmountLabelProps) {
 	return (
 		<>
 			<div className="flex justify-between">
-
-                <div className="shrink content-center text-xs text-gray-500">
-                    {props.coinsPerRoll}x
-                </div>
-				<div className="mx-2 my-0.5 border-2 border-transparent text-right">
-
+				<div className="shrink content-center text-xs text-gray-500">
+					{props.coinsPerRoll}x
+				</div>
+				<div className="mx-2 my-0.5 w-16 border-2 border-transparent text-right">
 					{sumTotalAmount} x
 				</div>
 			</div>
