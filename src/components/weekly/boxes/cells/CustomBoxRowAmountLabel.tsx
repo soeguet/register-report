@@ -1,11 +1,11 @@
 import {
 	WeeklyObjectNominal,
 	useWeeklyStore,
-} from "../../../../../stores/weekly/weeklyStore";
+} from "../../../../stores/weekly/weeklyStore";
+import { determineBoxFactor } from "../../../../utils/boxFactor";
 
 type CustomBoxRowTotalLabelProps = {
 	nominal: WeeklyObjectNominal;
-	rollsPerBox: number;
 	coinsPerRoll: number;
 };
 
@@ -14,13 +14,14 @@ function CustomBoxRowAmountLabel(props: CustomBoxRowTotalLabelProps) {
 		(state) => state.boxValues[props.nominal],
 	);
 	const sumAmount = totalAmount.reduce((acc, curr) => acc + curr, 0);
-	const sumTotalAmount = sumAmount * props.rollsPerBox * props.coinsPerRoll;
+	const rollsPerBox = determineBoxFactor(props.nominal);
+	const sumTotalAmount = sumAmount * rollsPerBox * props.coinsPerRoll;
 
 	return (
 		<>
 			<div className="flex justify-between gap-2">
 				<div className="shrink content-center text-xs text-gray-500">
-					{props.coinsPerRoll}x {props.rollsPerBox}x
+					{props.coinsPerRoll}x {rollsPerBox}x
 				</div>
 				<div className="mx-2 my-0.5 border-2 border-transparent text-right">
 					{sumTotalAmount} x

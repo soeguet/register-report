@@ -1,4 +1,4 @@
-import { MainFrame } from "./daily/MainFrame.tsx";
+import { MainFrame } from "./MainFrame.tsx";
 
 function App() {
     return (

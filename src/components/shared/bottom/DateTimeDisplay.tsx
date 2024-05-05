@@ -22,7 +22,7 @@ function DateTimeDisplay() {
     }, []);
 
     return (
-        <div className="datetime-display my-auto text-nowrap text-gray-500">
+        <div className="my-auto text-nowrap text-gray-500">
             live date-time: {currentDateTime}
         </div>
     );

@@ -1,6 +1,6 @@
-import { DiffValue } from "./result/DiffValue.tsx";
-import { TargetValue } from "./result/TargetValue.tsx";
-import { TotalValue } from "./result/TotalValue.tsx";
+import { DiffValue } from "../../daily/bottom/result/DiffValue.tsx";
+import { TargetValue } from "../../daily/bottom/result/TargetValue.tsx";
+import { TotalValue } from "../../daily/bottom/result/TotalValue.tsx";
 
 export type RequestPayload = {
 	payloadType: number;

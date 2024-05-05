@@ -1,5 +1,5 @@
-import { PdfButton } from "./buttons/PdfButton.tsx";
-import { ResetButton } from "./buttons/ResetButton.tsx";
+import { PdfButton } from "./buttons/PdfButton.js";
+import { ResetButton } from "./buttons/ResetButton.js";
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 

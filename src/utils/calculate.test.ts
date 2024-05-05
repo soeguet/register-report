@@ -1,5 +1,5 @@
 import { expect, test, describe } from "vitest";
-import { calculateTotalRollValue, calculateValueOfAllCoins } from "./calculate";
+import { calculateTotalBoxValue, calculateTotalRollValue, calculateValueOfAllCoins } from "./calculate";
 import { WeeklyObjectType } from "../stores/weekly/weeklyStore";
 
 describe("calculate - calculateValueOfAllCoins", () => {
@@ -32,27 +32,6 @@ describe("calculate - calculateValueOfAllCoins", () => {
     });
 
 });
-
-
-/**
-* calculates the total value of all coins in the given rolls
-* @param rollValues the values of the coins
-* @returns the total value of all coins in the given rolls
-*/
-// export function calculateTotalRollValue(rollValues: WeeklyObjectType) {
-//     let total = 0;
-//     Object.entries(rollValues).forEach(
-//         ([nominal, values]: [string, number[]]) => {
-//             const sum = values.reduce((acc, value) => acc + value, 0);
-//             const nominalKey = nominal as WeeklyObjectNominal;
-//             const rollFactor = coinValues[nominalKey];
-//             const coinValue = coinValues[nominalKey];
-//             const totalValue = sum * coinValue * rollFactor;
-//             total += totalValue;
-//         },
-//     );
-//     return total;
-// }
 
 describe("calculate - calculateValueOfAllCoins", () => {
 
@@ -92,14 +71,51 @@ describe("calculate - calculateValueOfAllCoins", () => {
             ((1 + 2 + 3 + 4 + 5) * 0.01 * 50));
     });
 
-	test("sum value of coin object - 0 in array", () => {
+    test("sum value of coin object - 0 in array", () => {
 
-		const coinObject = {
-			"1_euro": [0],
-		} as WeeklyObjectType;
+        const coinObject = {
+            "1_euro": [0],
+        } as WeeklyObjectType;
 
-		const totalValue = calculateTotalRollValue(coinObject);
+        const totalValue = calculateTotalRollValue(coinObject);
 
-		expect(totalValue).toBe((0) * 1 * 25);
-	});
+        expect(totalValue).toBe((0) * 1 * 25);
+    });
+});
+
+
+// export function calculateTotalBoxValue(boxValues: WeeklyObjectType) {
+//     let total = 0;
+//     Object.entries(boxValues).forEach(
+//         ([nominal, values]: [string, number[]]) => {
+//             const sum = values.reduce((acc, value) => acc + value, 0);
+//             const nominalKey = nominal as WeeklyObjectNominal;
+//             const boxFactor = determineBoxFactor(nominalKey);
+//             const rollFactor = coinValues[nominalKey];
+//             const coinValue = coinValues[nominalKey];
+//             const totalValue = sum * coinValue * boxFactor * rollFactor;
+//             total += totalValue;
+//         },
+//     );
+//     return total;
+// }
+
+describe("calculateTotalBoxValue", () => {
+
+    test("calculate total box value correctly", () => {
+
+        const boxValues = {
+            "2_euro": [2],
+            "1_euro": [2],
+            "50_cent": [2],
+            "20_cent": [2],
+            "10_cent": [2],
+            "5_cent": [2],
+            "2_cent": [2],
+            "1_cent": [2]
+        };
+
+        const calculatedValue = calculateTotalBoxValue(boxValues);
+        expect(calculatedValue).toBe((2 * 3 * 2 * 25) + (2 * 3 * 1 * 25) + (2 * 3 * 0.5 * 40) + (2 * 3 * 0.2 * 40) + (2 * 3 * 0.1 * 40) + (2 * 3 * 0.05 * 50) + (2 * 5 * 0.02 * 50) + (2 * 5 * 0.01 * 50));
+    });
 });

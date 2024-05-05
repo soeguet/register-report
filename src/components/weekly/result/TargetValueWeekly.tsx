@@ -1,6 +1,6 @@
-import { useDailyStore } from "../../../../stores/daily/dailyStore";
-import { formatNumber } from "../../../../utils/converter";
-import { ValidationIndicator } from "../../bottom/result/ValidationIndicator";
+import { useDailyStore } from "../../../stores/daily/dailyStore";
+import { formatNumber } from "../../../utils/converter";
+import { ValidationIndicator } from "../../daily/bottom/result/ValidationIndicator";
 
 function TargetValueWeekly() {
     const targetValue = useDailyStore((state) => state.targetValue);

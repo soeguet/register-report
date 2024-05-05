@@ -1,7 +1,7 @@
 import {
 	WeeklyObjectNominal,
 	useWeeklyStore,
-} from "../../../../../stores/weekly/weeklyStore";
+} from "../../../../stores/weekly/weeklyStore";
 
 type CustomRollRowAmountLabelProps = {
 	nominal: WeeklyObjectNominal;

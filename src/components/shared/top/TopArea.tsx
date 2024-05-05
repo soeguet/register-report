@@ -1,6 +1,6 @@
-import { ButtonField } from "./ButtonField.tsx";
-import { TargetInputField } from "./TargetInputField.tsx";
-import { WeeklyCheckbox } from "./WeeklyCheckbox.tsx";
+import { ButtonField } from "./ButtonField.js";
+import { TargetInputField } from "./TargetInputField.js";
+import { WeeklyCheckbox } from "./WeeklyCheckbox.js";
 
 interface TopAreaProps {
     bodyRef: React.RefObject<HTMLDivElement>;

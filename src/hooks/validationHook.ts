@@ -1,4 +1,4 @@
-import { RequestPayload } from "../components/daily/bottom/ResultRow";
+import { RequestPayload } from "../components/shared/bottom/ResultRow";
 import { DailyObjectType, useDailyStore } from "../stores/daily/dailyStore";
 
 const apiURL = import.meta.env.VITE_API_URL;

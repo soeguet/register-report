@@ -1,12 +1,12 @@
-import { useWeeklyStore } from "../../stores/weekly/weeklyStore.ts";
-import { AmountColumn } from "./body/columns/AmountColumn.tsx";
-import { InputColumn } from "./body/columns/InputColumn.tsx";
-import { LabelColumn } from "./body/columns/LabelColumn.tsx";
-import { ValueColumn } from "./body/columns/ValueColumn.tsx";
-import { DateTimeDisplay } from "./bottom/DateTimeDisplay.tsx";
-import { ResultRow } from "./bottom/ResultRow.tsx";
+import { useWeeklyStore } from "../stores/weekly/weeklyStore.ts";
+import { AmountColumn } from "./daily/body/columns/AmountColumn.tsx";
+import { InputColumn } from "./daily/body/columns/InputColumn.tsx";
+import { LabelColumn } from "./daily/body/columns/LabelColumn.tsx";
+import { ValueColumn } from "./daily/body/columns/ValueColumn.tsx";
+import { DateTimeDisplay } from "./shared/bottom/DateTimeDisplay.tsx";
+import { ResultRow } from "./shared/bottom/ResultRow.tsx";
 import { ResultRowWeekly } from "./weekly/result/ResultRowWeekly.tsx";
-import { TopArea } from "./top/TopArea.tsx";
+import { TopArea } from "./shared/top/TopArea.tsx";
 import { WeeklyContainer } from "./weekly/WeeklyContainer.tsx";
 import React from "react";
 

@@ -1,4 +1,4 @@
-import { useWeeklyStore } from "../../../stores/weekly/weeklyStore";
+import { useWeeklyStore } from "../../stores/weekly/weeklyStore";
 import { ExtraMoneyBoxes } from "./boxes/ExtraMoneyBoxes";
 import { ExtraMoneyRolls } from "./rolls/ExtraMoneyRolls";
 

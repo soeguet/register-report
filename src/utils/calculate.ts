@@ -1,4 +1,5 @@
 import { WeeklyObjectNominal, WeeklyObjectType } from "../stores/weekly/weeklyStore";
+import { determineBoxFactor } from "./boxFactor";
 import { coinAmounts, coinValues } from "./customTypes";
 
 /**
@@ -37,3 +38,26 @@ export function calculateTotalRollValue(rollValues: WeeklyObjectType): number {
     );
     return total;
 }
+
+/**
+* calculates the total value of all coins in the given rolls
+* @param boxValues the values of the coins
+* @returns the total value of all coins in the given rolls
+*/
+export function calculateTotalBoxValue(boxValues: WeeklyObjectType):number {
+    let total = 0;
+    Object.entries(boxValues).forEach(
+        ([nominal, values]: [string, number[]]) => {
+            const sum = values.reduce((acc, value) => acc + value, 0);
+            const nominalKey = nominal as WeeklyObjectNominal;
+            const boxFactor = determineBoxFactor(nominalKey);
+            const rollFactor = coinAmounts[nominalKey];
+            const coinValue = coinValues[nominalKey];
+            const totalValue = sum * coinValue * boxFactor * rollFactor;
+
+            total += totalValue;
+        },
+    );
+    return total;
+}
+
