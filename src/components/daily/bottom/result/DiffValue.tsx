@@ -23,6 +23,7 @@ function DiffValue() {
             return "bg-blue-200";
         }
     };
+
     useEffect(() => {
         useDailyStore.getState().setIsFetchingData(true);
         fetchWithDebounce();

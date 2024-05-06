@@ -6,7 +6,7 @@ function TargetValueWeekly() {
     const targetValue = useDailyStore((state) => state.targetValue);
     return (
         <>
-            <div className="mb-2 flex justify-between bg-red-200">
+            <div className="mb-2 flex justify-between">
                 <div className="mr-5">target</div>
                 <div className="flex">
                     <div data-testid="targetDisplayDiv" className="text-right">

@@ -27,7 +27,6 @@ function CustomRollInput(props: CustomInputFieldProps) {
 					value={thisValue}
 					data-tag={"5"}
 					onChange={(event) => {
-						console.log(event.target.value);
 						handleChange(
 							event.target.value,
 							props.index,

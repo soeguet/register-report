@@ -22,8 +22,6 @@ type useWeeklyStoreType = {
     resetValues: () => void;
     handleBoxChange: (value: string, nominal: WeeklyObjectNominal) => void;
     handleRollChange: (value: string, index: number, nominal: WeeklyObjectNominal) => void;
-	totalResult: number;
-	setTotalResult: (newTotalResult: number) => void;
 };
 
 const useWeeklyStore: UseBoundStore<StoreApi<useWeeklyStoreType>> =
@@ -90,9 +88,6 @@ const useWeeklyStore: UseBoundStore<StoreApi<useWeeklyStoreType>> =
                 newValues[nominal][index] = newValue;
                 return { rollValues: newValues };
             }),
-        totalResult: 0,
-        setTotalResult: (newTotalResult: number) =>
-            set({ totalResult: newTotalResult }),
     }));
 
 export { useWeeklyStore };
