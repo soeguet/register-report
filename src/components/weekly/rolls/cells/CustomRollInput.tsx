@@ -18,7 +18,7 @@ function CustomRollInput(props: CustomInputFieldProps) {
 		<>
 			<div className="m-0.5" style={{ maxWidth: "100px" }}>
 				<input
-					id={`${props.nominal}-${props.index}`}
+					id={`weekly-rolls-${props.nominal}-${props.index}`}
 					data-testid={`${props.nominal}-${props.index}`}
                     className="box-border w-full border-2 border-black text-right transition-all duration-500 ease-in-out focus:rounded-l focus:bg-blue-200 focus:outline-none"
 					style={{ maxWidth: "80px" }}

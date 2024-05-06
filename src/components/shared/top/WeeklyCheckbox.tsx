@@ -6,6 +6,7 @@ function WeeklyCheckbox() {
             <label className="content-center px-5">
                 <input
                     type="checkbox"
+					id="weekly-checkbox"
                     onChange={(event) => {
                         useWeeklyStore
                             .getState()

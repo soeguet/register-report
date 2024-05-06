@@ -1,8 +1,9 @@
 import {
-	WeeklyObjectNominal,
-	useWeeklyStore,
+    WeeklyObjectNominal,
+    useWeeklyStore,
 } from "../../../../stores/weekly/weeklyStore";
 import { determineBoxFactor } from "../../../../utils/boxFactor";
+import { formatNumber } from "../../../../utils/converter";
 import { coinValues } from "../../../../utils/customTypes";
 
 type CustomBoxRowTotalLabelProps = {
@@ -31,11 +32,11 @@ function CustomBoxRowTotalLabel(props: CustomBoxRowTotalLabelProps) {
 	const rollsPerBox = determineBoxFactor(props.nominal);
 
 	const totalValue = label * rollsPerBox * props.coinsPerRoll * sumAmount;
-	const totalValueString = totalValue.toFixed(2);
+	const totalValueString = formatNumber(totalValue);
 
 	return (
 		<>
-			<div className="mx-2 my-0.5 w-20 border-2 border-transparent text-right">
+			<div className="mx-2 my-0.5 w-32 border-2 border-transparent text-right">
 				{totalValueString} €
 			</div>
 		</>
