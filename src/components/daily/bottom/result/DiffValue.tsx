@@ -42,7 +42,7 @@ function DiffValue() {
                     </div>
                     <ValidationIndicator
                         targetValue={apiDiffValue}
-                        currentValue={diff.toFixed(2)}
+                        currentValue={formattedDiff}
                     />
                 </div>
             </div>

@@ -103,7 +103,6 @@ function createRequestPayload(dailyValues: DailyObject, targetValue: number, isW
     return payload;
 }
 
-// Function to handle API request
 async function sendValidationRequest(apiUrl: string, apiPort: string, payload: WeeklyPayloadType, updateState: (data: ResponsePayloadType) => void) {
     const requestOptions = {
         method: "POST",
@@ -128,7 +127,6 @@ type ResponsePayloadType = {
     }
 }
 
-// The refactored function
 async function validationRequest(useDailyStore: Store, useWeeklyStore: Store, apiURL: string, apiPort: string) {
     const dailyState = extractStateData(useDailyStore);
     const weeklyState = extractStateData(useWeeklyStore);

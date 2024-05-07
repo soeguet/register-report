@@ -19,7 +19,7 @@ function TotalValue() {
 						{formattedTotal} €
 					</div>
 					<ValidationIndicator
-						currentValue={total.toFixed(2)}
+						currentValue={formattedTotal}
 						targetValue={apiTotalValue}
 					/>
 				</div>

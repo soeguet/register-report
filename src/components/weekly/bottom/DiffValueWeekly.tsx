@@ -50,8 +50,8 @@ function DiffValueWeekly() {
                         {formattedDiff} €
                     </div>
                     <ValidationIndicator
-                        targetValue={apiDiffValue.apiTotalValue}
-                        currentValue={diff.toFixed(2)}
+                        targetValue={apiDiffValue.apiDiffValue}
+                        currentValue={formattedDiff}
                     />
                 </div>
             </div>
