@@ -1,5 +1,5 @@
 # register-report
-
+![register-report1.png](public/register-report1.png)
 ## description
 
 this is a simple, personal project to generate a report of the cash register.
@@ -69,3 +69,6 @@ npm run test
 
 ## license
 this project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+![register-report2.png](public/register-report2.png)
+![register-report3.png](public/register-report3.png)
